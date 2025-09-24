@@ -41,6 +41,22 @@ const IndexPage = ({ data }) => {
     { name: 'Law & Justice', icon: '⚖️', color: 'orange', count: booksNodes.filter(b => b.raw?.tags?.includes('law')).length || 0 }
   ];
 
+  // Helper function to abbreviate months for mobile
+  const abbreviateDate = (dateString) => {
+    if (!dateString) return 'New';
+    const monthAbbreviations = {
+      'January': 'Jan', 'February': 'Feb', 'March': 'Mar',
+      'April': 'Apr', 'May': 'May', 'June': 'Jun',
+      'July': 'Jul', 'August': 'Aug', 'September': 'Sep',
+      'October': 'Oct', 'November': 'Nov', 'December': 'Dec'
+    };
+    let abbreviated = dateString;
+    Object.keys(monthAbbreviations).forEach(month => {
+      abbreviated = abbreviated.replace(month, monthAbbreviations[month]);
+    });
+    return abbreviated;
+  };
+
   return (
     <Layout seo={{ title: 'Home' }}>
       {/* Mobile-first hero with image-first layout */}
@@ -198,19 +214,40 @@ const IndexPage = ({ data }) => {
                         ))}
                       </div>
                     )}
-                    <div className="text-[18px] uppercase tracking-[0.25em] text-gray-500 mb-5 flex items-center justify-start gap-3">
-                      <span className="inline-flex items-center gap-2">
-                        <img src="/linda-hero.png" alt="Linda Mutesi" className="w-7 h-7 rounded-full object-cover" />
-                        <span className="tracking-normal uppercase text-gray-700">By Linda Mutesi</span>
-                      </span>
-                      <span className="text-gray-400">•</span>
-                      <span>{featuredDate ? featuredDate : 'New'}</span>
-                      {readingTime && (
-                        <>
-                          <span className="text-gray-400">•</span>
-                          <span>{readingTime} min read</span>
-                        </>
-                      )}
+                    {/* Mobile-optimized author and meta info */}
+                    <div className="mb-5">
+                      {/* Mobile layout - stacked */}
+                      <div className="sm:hidden">
+                        <div className="flex items-center gap-2 mb-2">
+                          <img src="/linda-hero.png" alt="Linda Mutesi" className="w-5 h-5 rounded-full object-cover" />
+                          <span className="text-xs font-medium text-gray-700 uppercase tracking-wide">By Linda Mutesi</span>
+                        </div>
+                        <div className="flex items-center gap-2 text-xs text-gray-500 leading-tight">
+                          <span>{abbreviateDate(featuredDate)}</span>
+                          {readingTime && (
+                            <>
+                              <span className="text-gray-400">•</span>
+                              <span>{readingTime} min read</span>
+                            </>
+                          )}
+                        </div>
+                      </div>
+                      
+                      {/* Desktop layout - horizontal */}
+                      <div className="hidden sm:flex items-center justify-start gap-3 text-[18px] uppercase tracking-[0.25em] text-gray-500">
+                        <span className="inline-flex items-center gap-2">
+                          <img src="/linda-hero.png" alt="Linda Mutesi" className="w-7 h-7 rounded-full object-cover" />
+                          <span className="tracking-normal uppercase text-gray-700">By Linda Mutesi</span>
+                        </span>
+                        <span className="text-gray-400">•</span>
+                        <span>{featuredDate ? featuredDate : 'New'}</span>
+                        {readingTime && (
+                          <>
+                            <span className="text-gray-400">•</span>
+                            <span>{readingTime} min read</span>
+                          </>
+                        )}
+                      </div>
                     </div>
                     <h3 className="text-2xl md:text-3xl font-semibold text-black">
                       <Link to={`/blog/${featuredUid}`} className="inline-block hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-black/20">
