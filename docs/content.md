@@ -1,87 +1,40 @@
-Linda Mutesi – Professional Bio
+Hello, I’m Linda Mutesi!
 
-Linda is a passionate community builder, who has over the last 15 years invested herself in supporting the growth of communities that support talent and skills development, spaces for the visual arts to thrive, championing youth and women startups, and has been an effective voice for marginalised groups in society.
+For more than fifteen years, I have been lucky to be a part of passionate community builders in Uganda that nurture creativity, innovation and opportunity. My journey has taken me across diverse fields—supporting talent development, championing the visual arts, mentoring youth and women-led startups and advocating for things I believe.
 
-Trained as a lawyer and an advocate of the Ugandan Courts of Judicature, Linda is a partner at Adalci Advocates. She serves on various Boards as Director, Co-Founder & Patron for organisations she directly supports and those she has founded.
- 
-A committed mobiliser of people and resources, Linda’s work spans across different areas of impact, particularly those that uplift society, such as the visual arts, women in business, promotion of African literature/authors, funding for youth enterprise and building a culture of ‘giving and sharing’ based on the intrinsic values of African philanthropy.  
+A trained lawyer and Partner at Adalci Advocates, I serve on several boards as Director, Co-Founder and Patron. My interests span the visual arts, women led business, African literature, youth enterprise and interrogating African philanthropy. At the heart of it all is a commitment to social justice, reflective culture and the power of creative expression to bring people together.
 
-She has associated herself with ideas that promote social justice, a reflective culture through reading and conversation, encouraged bold expression of talent, passion, creativity and has built mechanisms for philanthropy to support causes she cares about.
+Through The Bold Woman Fund, we work with Ugandan women entrepreneurs in fashion and design, offering training and retail opportunities at Bold in Africa, a store dedicated to showcasing exclusively made-in-Africa brands. This initiative is a product of the belief that women are the backbone of our societies and skilled women multiply resources across spaces
 
-Through The Bold Woman Fund, Linda has created programs that support Ugandan women entrepreneurs in the fashion and design industry in Uganda through various trainings and provision of a last mile retail solution  for these young women’s work at her Bold in Africa Store that carries made in Africa brands only.
+Currently, I am pursuing a Master’s degree in Philanthropic Studies at the University of Kent in the UK. Beyond my professional life, I am a mother of two teenage boys, a curious reader and an enthusiastic participant in spaces that question, teach and grow the mind.
 
-A current student at the University of Kent in the United Kingdom, pursuing an MA in Philanthropic Studies, Linda is a mother of two teenage boys, 13 and 15 years old. Her favorite pastimes are reading, participating and contributing to cultural events and conversation.
- 
-More on Linda’s  work can be found here;
-• November 2018 – present: Director & Board Member 32 Degrees East
-• June 2023 – present: Board Chairperson - Taala Foundation.
-• September 2022 – present: Co-Founder & Director FG. Foundation.
-• January 2021 – present: Founder & Chairperson – The Citizen Report- Uganda.
-• August 2021 – present: Director & Patron - Njabala Foundation.
-• October 2021 – present: Partner - Adalci Advocates.
-• November 2021 – present: Co-Director- The Bold Woman Fund.
-• June 2014 – present: Director - Bold in Africa
-• August 2018 – present; Board of Governors, 7 Hills International School.
-• February 2016 – present: Director and Secretary – FundiBots Ltd.
- 
+Alongside my personal and professional journey, I have been fortunate to contribute to a range of initiatives that reflect my passion for community building, creativity and social change. At 32 Degrees East, where I am a Trustee and Board Member since 2018, I work with the centre’s leadership to bolster contemporary art practice in Uganda. As the outgoing Board Chairperson of Taala Foundation, I supported the organisation’s the leadership with strategy in their work that centers mental health awareness and creative therapy for sexual minorities, an area of life that is often overlooked yet vital for community well-being.
 
-Contact Information: Phone: +256782657881 | Email: mutesisekaziga@gmail.com
+In 2022, I co-founded the FG Foundation, a platform dedicated to interrogating African philanthropy and community building. At The Citizen Report–Uganda, which I founded in 2021, we encourage civic participation and amplify citizen voices in governance and social justice. 
+
+With both the Bold Woman Fund and Bold in Africa, we continue to work with women entrepreneurs and African-made brands, ensuring that local creativity has both visibility and opportunity. Beyond these, I have served as a Governor at 7 Hills International School….(dates) supporting educational excellence, and as Director and Secretary at FundiBots Ltd since ….., an organization that equips young people with practical science and robotics skills for the future. 
 
 
+Looking ahead, my vision is to see each of these initiatives grow in sustainability and impact over the next decade. Together, they embody the values I hold close: empowerment, creativity, justice, and the belief that communities thrive when opportunities are shared.
+
+This blog is where I bring these journeys together. Here, you’ll find personal reflections on my work as a lawyer, philanthropy student, and community collaborator; behind-the-scenes insights into the projects I am part of; and conversations with fellow creatives who are making a difference in their fields. At its core, this space is about storytelling—the kind that uplifts, challenges, and connects us.
+
+I believe deeply in the transformative power of art: its ability to change lives, expand perspectives, and bridge communities. My hope is that through these stories and reflections, you’ll not only glimpse the work I do but also discover the wider beauty of human expression and connection.
+
+I invite you to join me on this journey. By signing up for my newsletter, you’ll receive personal stories, creative insights, and updates on projects that joy my heart. 
+
+With warmth,
+Linda Mutesi
 
 
-Hello I am Linda Mutesi!
+The Blog mapping 
+•	Read the Latest Story
+•	Other stories 
+•	Featured Article
+•	Sign up for updates and news. 
 
-- Personal Profile (with social media accounts, photo, video)
-My Journey as a Community Builder
-
-For 15 years, I've built communities supporting talent development, visual arts, youth and women startups, and marginalized groups. As a Ugandan lawyer and partner at Adalci Advocates, I serve on multiple Boards as Director, Co-Founder, and Patron.
-
-I mobilize resources across various impact areas: visual arts, women in business, African literature, youth enterprise, and African philanthropy. I champion social justice, reflective culture, creative expression, and philanthropic support for causes I value.
-
-Through The Bold Woman Fund, I support Ugandan women entrepreneurs in fashion and design with training and retail opportunities at my Bold in Africa Store, which exclusively features made-in-Africa brands.
-
-Currently pursuing an MA in Philanthropic Studies at the University of Kent (UK), I'm also mother to two teenage boys. I enjoy reading and participating in cultural events and conversations.
-
-- What the site is about/What I do and write about.
-A lover of books, African Arts, and a philanthropist passionate about sharing meaningful stories.
-
-Here, you'll discover thoughtful reflections on my professional and entrepreneurship journey, behind-the-scenes glimpses into my philanthropic work, and conversations with fellow creatives who are making an impact. I believe in the power of art to transform lives and build bridges between communities.
-
-Join me on this journey by signing up for my newsletter. You'll receive personal stories, creative insights, and updates about projects that celebrate the beauty of human expression and connection.
-
-My Initiatives
-
-Each page with a short blurb on the history of how the project started, what it has achieved, and plans for the next 10 years.
-
-More on Linda’s  work can be found here;
-• November 2018 – present: Director & Board Member 32 Degrees East
-• June 2023 – present: Board Chairperson - Taala Foundation.
-• September 2022 – present: Co-Founder & Director FG. Foundation.
-• January 2021 – present: Founder & Chairperson – The Citizen Report- Uganda.
-• August 2021 – present: Director & Patron - Njabala Foundation.
-• October 2021 – present: Partner - Adalci Advocates.
-• November 2021 – present: Co-Director- The Bold Woman Fund.
-• June 2014 – present: Director - Bold in Africa
-• August 2018 – present; Board of Governors, 7 Hills International School.
-• February 2016 – present: Director and Secretary – FundiBots Ltd.
- 
-The Blog: TBD
-
-• Read the Latest Story
-• Other stories
-• Featured Article
-• Sign up for updates and news.
-Speaking Engagements
-
-• What I speak about
-• Book Linda for your next event
 Suggestions of Books and Articles for your reading pleasure
-
-• Book Gallery
-• Monthly Featured Book
+•	Book Gallery
+•	Monthly Featured Book
 Podcast
-
-• Linda’s Library – (featuring the books in her library and her brief review of a select few )  
-
-
+•	Listen to my favorite Podcasts  

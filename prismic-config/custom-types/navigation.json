@@ -1,0 +1,74 @@
+{
+  "id": "navigation",
+  "label": "Navigation",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "main_menu": {
+      "type": "Group",
+      "config": {
+        "label": "Main Menu",
+        "fields": {
+          "label": {
+            "type": "Text",
+            "config": {
+              "label": "Label",
+              "placeholder": "Home"
+            }
+          },
+          "link": {
+            "type": "Link",
+            "config": {
+              "label": "Link",
+              "placeholder": "/"
+            }
+          }
+        }
+      }
+    },
+    "footer_menu": {
+      "type": "Group",
+      "config": {
+        "label": "Footer Menu",
+        "fields": {
+          "label": {
+            "type": "Text",
+            "config": {
+              "label": "Label",
+              "placeholder": "Privacy Policy"
+            }
+          },
+          "link": {
+            "type": "Link",
+            "config": {
+              "label": "Link",
+              "placeholder": "/privacy"
+            }
+          }
+        }
+      }
+    },
+    "social_links": {
+      "type": "Group",
+      "config": {
+        "label": "Social Links",
+        "fields": {
+          "platform": {
+            "type": "Text",
+            "config": {
+              "label": "Platform",
+              "placeholder": "LinkedIn"
+            }
+          },
+          "url": {
+            "type": "Link",
+            "config": {
+              "label": "URL",
+              "placeholder": "https://linkedin.com/in/lindamutesi"
+            }
+          }
+        }
+      }
+    }
+  }
+}

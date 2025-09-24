@@ -1,0 +1,100 @@
+{
+  "id": "homepage",
+  "label": "Homepage",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "hero_title": {
+      "type": "StructuredText",
+      "config": {
+        "label": "Hero Title",
+        "placeholder": "Hello I am Linda Mutesi!",
+        "allowTargetBlank": true,
+        "single": "heading1"
+      }
+    },
+    "hero_subtitle": {
+      "type": "StructuredText",
+      "config": {
+        "label": "Hero Subtitle",
+        "placeholder": "A lover of books, African Arts, and a philanthropist passionate about sharing meaningful stories.",
+        "allowTargetBlank": true,
+        "single": "paragraph"
+      }
+    },
+    "hero_cta_text": {
+      "type": "Text",
+      "config": {
+        "label": "Hero CTA Text",
+        "placeholder": "Discover My Work"
+      }
+    },
+    "hero_cta_link": {
+      "type": "Link",
+      "config": {
+        "label": "Hero CTA Link",
+        "placeholder": "/about"
+      }
+    },
+    "hero_image": {
+      "type": "Image",
+      "config": {
+        "label": "Hero Image",
+        "constraint": {
+          "width": 1200,
+          "height": 630
+        },
+        "thumbnails": []
+      }
+    },
+    "featured_article": {
+      "type": "Link",
+      "config": {
+        "label": "Featured Article",
+        "placeholder": "Select a featured article"
+      }
+    },
+    "featured_initiative": {
+      "type": "Link",
+      "config": {
+        "label": "Featured Initiative",
+        "placeholder": "Select a featured initiative"
+      }
+    },
+    "newsletter_signup": {
+      "type": "Text",
+      "config": {
+        "label": "Newsletter Signup Text",
+        "placeholder": "Subscribe to our newsletter"
+      }
+    },
+    "latest_podcast_episode": {
+      "type": "Link",
+      "config": {
+        "label": "Latest Podcast Episode",
+        "placeholder": "Select latest podcast episode"
+      }
+    },
+    "content": {
+      "type": "StructuredText",
+      "config": {
+        "label": "Content",
+        "placeholder": "Add content here...",
+        "allowTargetBlank": true,
+        "multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, rtl"
+      }
+    },
+    "seo_title": {
+      "type": "Text",
+      "config": {
+        "label": "SEO Title"
+      }
+    },
+    "seo_description": {
+      "type": "Text",
+      "config": {
+        "label": "SEO Description"
+      }
+    }
+  }
+}

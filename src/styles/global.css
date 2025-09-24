@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -7,8 +7,34 @@
 @layer base {
   body {
     @apply bg-brand-light text-brand-gray antialiased;
+    font-size: 18px; /* Base body size for readability */
+    line-height: 1.7;
   }
   h1, h2, h3, h4, h5, h6 {
-    @apply font-serif text-brand-dark;
+    @apply font-sans text-brand-dark;
   }
+  h1 { line-height: 1.12; }
+  h2 { line-height: 1.18; }
+  h3, h4 { line-height: 1.22; }
+  p { margin-bottom: 1.15em; }
+  a { text-underline-offset: 3px; }
+  blockquote {
+    @apply border-l-4 border-gray-300 pl-5 italic text-gray-800;
+  }
+  hr { @apply border-gray-200 my-10; }
+}
+
+/* Ensure a sensible minimum font size across the site */
+@layer utilities {
+  /* Override Tailwind's smallest size to avoid unreadably small text */
+  .text-xs {
+    font-size: 0.95rem; /* ~15.2px */
+    line-height: 1.4;
+  }
+  /* Slightly lift small as well for readability */
+  .text-sm {
+    font-size: 1rem; /* 16px */
+    line-height: 1.5;
+  }
+  .reading-width { max-width: 65ch; }
 }

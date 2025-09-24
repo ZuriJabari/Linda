@@ -13,5 +13,13 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+# Deployment
+public-dist.zip
+*.zip
+
+# Development backups
+*.backup
+*-broken.*
+
 # Misc
 .DS_Store

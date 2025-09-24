@@ -1,0 +1,51 @@
+{
+  "Main" : {
+    "book_title" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "Book Title",
+        "placeholder" : "Title of the book"
+      }
+    },
+    "author" : {
+      "type" : "Text",
+      "config" : {
+        "label" : "Author",
+        "placeholder" : "Book author name"
+      }
+    },
+    "cover_image" : {
+      "type" : "Image",
+      "config" : {
+        "label" : "Cover Image",
+        "constraint" : {
+          "width" : 400,
+          "height" : 600
+        },
+        "thumbnails" : [ {
+          "name" : "thumbnail",
+          "width" : 150,
+          "height" : 225
+        } ]
+      }
+    },
+    "short_review" : {
+      "type" : "StructuredText",
+      "config" : {
+        "label" : "Short Review / Notes",
+        "placeholder" : "Linda's review, notes, or key takeaways from the book",
+        "allowTargetBlank" : true,
+        "multi" : "paragraph,preformatted,heading1,heading2,heading3,strong,em,hyperlink,list-item,o-list-item"
+      }
+    },
+    "monthly_featured" : {
+      "type" : "Boolean",
+      "config" : {
+        "label" : "Monthly Featured Book",
+        "placeholder_false" : "Not featured",
+        "placeholder_true" : "Featured book of the month",
+        "default_value" : false
+      }
+    }
+  }
+}

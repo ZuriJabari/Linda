@@ -4,12 +4,19 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions;
 
   const blogPostTemplate = path.resolve('src/templates/blog-post.js');
+  const bookTemplate = path.resolve('src/templates/book.js');
 
   const result = await graphql(`
     {
       allPrismicBlogPost {
         nodes {
-          uid
+          raw
+        }
+      }
+      allPrismicBookGallery {
+        nodes {
+          id
+          raw
         }
       }
     }
@@ -22,11 +29,29 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   if (result.data.allPrismicBlogPost) {
     result.data.allPrismicBlogPost.nodes.forEach((post) => {
+      const uid = post?.raw?.uid;
+      if (!uid) return;
       createPage({
-        path: `/blog/${post.uid}`,
+        path: `/blog/${uid}`,
         component: blogPostTemplate,
         context: {
-          uid: post.uid,
+          uid,
+          blogPost: post.raw,
+        },
+      });
+    });
+  }
+
+  if (result.data.allPrismicBookGallery) {
+    result.data.allPrismicBookGallery.nodes.forEach((book) => {
+      const slug = book?.raw?.uid || book?.id;
+      if (!slug) return;
+      createPage({
+        path: `/books/${slug}`,
+        component: bookTemplate,
+        context: {
+          slug,
+          book: book.raw,
         },
       });
     });
