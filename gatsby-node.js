@@ -6,10 +6,13 @@ exports.createSchemaCustomization = ({ actions }) => {
   const typeDefs = `
     type PrismicBlogPost implements Node {
       raw: JSON
+      first_publication_date: Date
+      tags: [String]
     }
     
     type PrismicBookGallery implements Node {
       raw: JSON
+      first_publication_date: Date
     }
     
     type PrismicNavigation implements Node {

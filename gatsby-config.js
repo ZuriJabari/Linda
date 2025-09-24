@@ -20,7 +20,7 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-    {
+    ...(process.env.PRISMIC_REPOSITORY_NAME ? [{
       resolve: `gatsby-source-prismic`,
       options: {
         repositoryName: process.env.PRISMIC_REPOSITORY_NAME,
@@ -29,12 +29,10 @@ module.exports = {
           navigation: require('./prismic-config/custom-types/navigation.json'),
           homepage: require('./prismic-config/custom-types/homepage.json'),
           blog_post: require('./prismic-config/custom-types/blog_post.json'),
-          // Add the Book Gallery custom type so Gatsby knows about it
           book_gallery: require('./prismic-config/custom-types/book_gallery.json'),
-          // Register the singular book type (actual API ID from Prismic)
           book: require('./prismic-config/custom-types/book.json'),
         },
       },
-    },
+    }] : []),
   ],
 };
