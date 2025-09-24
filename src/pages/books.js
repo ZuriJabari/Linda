@@ -339,14 +339,13 @@ const BooksPage = ({ data }) => {
 
 export default BooksPage;
 
-// Commented out for static build
-// export const query = graphql`
-//   query BooksPage {
-//     allPrismicBookGallery(sort: { first_publication_date: DESC }) {
-//       nodes {
-//         id
-//         raw
-//       }
-//     }
-//   }
-// `;
+export const query = graphql`
+  query BooksPage {
+    allPrismicBookGallery(sort: { first_publication_date: DESC }) {
+      nodes {
+        id
+        raw
+      }
+    }
+  }
+`;

@@ -14,7 +14,7 @@ echo "Cleaning previous build..."
 rm -rf "$BUILD_DIR" .cache
 
 echo "Building production bundle..."
-PRISMIC_REPOSITORY_NAME="" GATSBY_CPU_COUNT=1 npm run build
+GATSBY_CPU_COUNT=1 npm run build
 
 if [ -f "$OUTPUT_ARCHIVE" ]; then
   echo "Removing existing archive: $OUTPUT_ARCHIVE"

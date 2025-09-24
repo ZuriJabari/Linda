@@ -20,10 +20,10 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-    ...(process.env.PRISMIC_REPOSITORY_NAME ? [{
+    {
       resolve: `gatsby-source-prismic`,
       options: {
-        repositoryName: process.env.PRISMIC_REPOSITORY_NAME,
+        repositoryName: process.env.PRISMIC_REPOSITORY_NAME || 'mutesilinda',
         accessToken: process.env.PRISMIC_ACCESS_TOKEN,
         schemas: {
           navigation: require('./prismic-config/custom-types/navigation.json'),
@@ -33,6 +33,6 @@ module.exports = {
           book: require('./prismic-config/custom-types/book.json'),
         },
       },
-    }] : []),
+    },
   ],
 };

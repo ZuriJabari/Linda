@@ -8,15 +8,35 @@ exports.createSchemaCustomization = ({ actions }) => {
       raw: JSON
       first_publication_date: Date
       tags: [String]
+      uid: String
     }
     
     type PrismicBookGallery implements Node {
       raw: JSON
       first_publication_date: Date
+      uid: String
     }
     
     type PrismicNavigation implements Node {
       raw: JSON
+    }
+    
+    type PrismicBlogPostData {
+      title: JSON
+      subtitle: JSON
+      content: JSON
+      featured_image: JSON
+      author: JSON
+      category: JSON
+    }
+    
+    type PrismicBookGalleryData {
+      book_title: JSON
+      author: JSON
+      cover_image: JSON
+      short_review: JSON
+      rating: JSON
+      category: JSON
     }
   `;
   

@@ -373,23 +373,22 @@ const BlogPostTemplate = ({ data, pageContext }) => {
   );
 };
 
-// Commented out for static build
-// export const query = graphql`
-//   query BlogPost($uid: String!) {
-//     prismicBlogPost(uid: { eq: $uid }) {
-//       raw
-//     }
-//     allPrismicBlogPost(
-//       limit: 4
-//       sort: { first_publication_date: DESC }
-//       filter: { uid: { ne: $uid } }
-//     ) {
-//       nodes {
-//         raw
-//         uid
-//       }
-//     }
-//   }
-// `;
+export const query = graphql`
+  query BlogPost($uid: String!) {
+    prismicBlogPost(uid: { eq: $uid }) {
+      raw
+    }
+    allPrismicBlogPost(
+      limit: 4
+      sort: { first_publication_date: DESC }
+      filter: { uid: { ne: $uid } }
+    ) {
+      nodes {
+        raw
+        uid
+      }
+    }
+  }
+`;
 
 export default BlogPostTemplate;

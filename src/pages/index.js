@@ -496,22 +496,21 @@ const IndexPage = ({ data }) => {
 
 export default IndexPage;
 
-// Simplified query for static build
-// export const query = graphql`
-//   query HomeFeatured {
-//     allPrismicBlogPost(limit: 4) {
-//       nodes {
-//         first_publication_date
-//         tags
-//         raw
-//       }
-//     }
-//     allPrismicBookGallery(limit: 8) {
-//       nodes {
-//         id
-//         first_publication_date
-//         raw
-//       }
-//     }
-//   }
-// `;
+export const query = graphql`
+  query HomeFeatured {
+    allPrismicBlogPost(limit: 4, sort: {first_publication_date: DESC}) {
+      nodes {
+        first_publication_date
+        tags
+        raw
+      }
+    }
+    allPrismicBookGallery(limit: 8, sort: {first_publication_date: DESC}) {
+      nodes {
+        id
+        first_publication_date
+        raw
+      }
+    }
+  }
+`;
