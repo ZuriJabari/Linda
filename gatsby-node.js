@@ -1,42 +1,130 @@
 const path = require('path');
 
-exports.createSchemaCustomization = ({ actions }) => {
+exports.createSchemaCustomization = ({ actions, schema }) => {
   const { createTypes } = actions;
   
+  // Prevent Gatsby from auto-inferring problematic Prismic field types
+  // Use @dontInfer to completely control the schema
   const typeDefs = `
-    type PrismicBlogPost implements Node {
+    type PrismicBlogPost implements Node @dontInfer {
+      id: ID!
+      internal: Internal!
       raw: JSON
-      first_publication_date: Date
+      first_publication_date: Date @dateformat
+      last_publication_date: Date @dateformat
+      uid: String
+      lang: String
+      type: String
       tags: [String]
-      uid: String
+      url: String
+      alternate_languages: [JSON]
+      data: PrismicBlogPostData
     }
     
-    type PrismicBookGallery implements Node {
+    type PrismicBlogPostData @dontInfer {
+      title: PrismicStructuredTextType
+      subtitle: PrismicStructuredTextType
+      date: Date @dateformat
+      featured_image: PrismicImageType
+      content: PrismicStructuredTextType
+    }
+    
+    type PrismicBookGallery implements Node @dontInfer {
+      id: ID!
+      internal: Internal!
       raw: JSON
-      first_publication_date: Date
+      first_publication_date: Date @dateformat
+      last_publication_date: Date @dateformat
       uid: String
+      lang: String
+      type: String
+      tags: [String]
+      url: String
+      alternate_languages: [JSON]
+      data: PrismicBookGalleryData
     }
     
-    type PrismicNavigation implements Node {
+    type PrismicBookGalleryData @dontInfer {
+      title: PrismicTextType
+      author: PrismicTextType
+      description: PrismicStructuredTextType
+      cover_image: PrismicImageType
+      amazon_link: PrismicLinkType
+      rating: Int
+    }
+    
+    type PrismicNavigation implements Node @dontInfer {
+      id: ID!
+      internal: Internal!
       raw: JSON
+      first_publication_date: Date @dateformat
+      last_publication_date: Date @dateformat
+      uid: String
+      lang: String
+      type: String
+      tags: [String]
+      url: String
+      alternate_languages: [JSON]
+      data: JSON
     }
     
-    type PrismicBlogPostData {
-      title: JSON
-      subtitle: JSON
-      content: JSON
-      featured_image: JSON
-      author: JSON
-      category: JSON
+    type PrismicHomepage implements Node @dontInfer {
+      id: ID!
+      internal: Internal!
+      raw: JSON
+      first_publication_date: Date @dateformat
+      last_publication_date: Date @dateformat
+      uid: String
+      lang: String
+      type: String
+      tags: [String]
+      url: String
+      alternate_languages: [JSON]
+      data: JSON
     }
     
-    type PrismicBookGalleryData {
-      book_title: JSON
-      author: JSON
-      cover_image: JSON
-      short_review: JSON
-      rating: JSON
-      category: JSON
+    type PrismicBook implements Node @dontInfer {
+      id: ID!
+      internal: Internal!
+      raw: JSON
+      first_publication_date: Date @dateformat
+      last_publication_date: Date @dateformat
+      uid: String
+      lang: String
+      type: String
+      tags: [String]
+      url: String
+      alternate_languages: [JSON]
+      data: JSON
+    }
+    
+    # Prismic helper types
+    type PrismicTextType {
+      text: String
+    }
+    
+    type PrismicStructuredTextType {
+      text: String
+      html: String
+      raw: [JSON]
+    }
+    
+    type PrismicImageType {
+      url: String
+      alt: String
+      copyright: String
+      dimensions: PrismicImageDimensionsType
+    }
+    
+    type PrismicImageDimensionsType {
+      width: Int
+      height: Int
+    }
+    
+    type PrismicLinkType {
+      url: String
+      target: String
+      link_type: String
     }
   `;
   

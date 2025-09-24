@@ -1,0 +1,11 @@
+{
+  "name": "gatsby-prismic-field-filter",
+  "version": "1.0.0",
+  "description": "Custom Prismic source plugin that fetches clean data without problematic field names",
+  "main": "gatsby-node.js",
+  "keywords": ["gatsby", "prismic", "graphql", "schema"],
+  "author": "Linda Daily Team",
+  "dependencies": {
+    "node-fetch": "^2.6.7"
+  }
+}
