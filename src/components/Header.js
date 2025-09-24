@@ -128,14 +128,14 @@ const Header = () => {
 
 
   return (
-    <header className={`relative z-[100] transition-colors duration-300 ${isScrolled ? 'bg-white/80 backdrop-blur-sm shadow-sm' : 'bg-transparent'}`}>
+    <header className={`relative z-[100] transition-colors duration-300 ${isScrolled ? 'bg-white/95 backdrop-blur-md shadow-sm' : 'bg-transparent'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
-          {/* Logo */}
-          <Link to="/" className="flex-shrink-0 select-none" aria-label="Mutesilinda.com Home">
+        <div className="flex items-center justify-between h-16 md:h-20">
+          {/* Logo - Mobile optimized */}
+          <Link to="/" className="flex-shrink-0 select-none py-2" aria-label="Mutesilinda.com Home">
             <span className="inline-flex items-baseline gap-1 text-black">
-              <span className="font-serif text-xl md:text-2xl leading-none">Mutesilinda</span>
-              <span className="text-gray-500 text-base md:text-lg leading-none">.com</span>
+              <span className="font-serif text-lg sm:text-xl md:text-2xl leading-none">Mutesilinda</span>
+              <span className="text-gray-500 text-sm sm:text-base md:text-lg leading-none">.com</span>
             </span>
           </Link>
 
@@ -143,8 +143,8 @@ const Header = () => {
           {
             <button
               onClick={toggleOverlay}
-              className={`fixed top-6 right-6 z-[400] inline-flex items-center justify-center gap-3 px-4 py-2 rounded-full text-sm md:text-base tracking-widest uppercase transition-colors w-32 ${
-                isOverlayOpen ? 'text-white' : 'text-black'
+              className={`fixed top-4 right-4 md:top-6 md:right-6 z-[400] inline-flex items-center justify-center gap-2 md:gap-3 px-3 py-2 md:px-4 rounded-full text-xs sm:text-sm md:text-base tracking-widest uppercase transition-all duration-200 w-24 sm:w-28 md:w-32 min-h-[44px] ${
+                isOverlayOpen ? 'text-white bg-black/20 backdrop-blur-sm' : 'text-black hover:bg-black/5'
               }`}
               aria-label={isOverlayOpen ? 'Close menu' : 'Open menu'}
               aria-expanded={isOverlayOpen}
@@ -152,9 +152,9 @@ const Header = () => {
               aria-controls="overlay-menu"
             >
               {/* Label with animated X when open */}
-              <span className="relative inline-block w-20 h-7 text-center">
+              <span className="relative inline-block w-14 sm:w-16 md:w-20 h-6 md:h-7 text-center">
                 {/* MENU text */}
-                <span className={`block transform transition-all duration-200 ease-out ${isOverlayOpen ? 'opacity-0 translate-y-1' : 'opacity-100 translate-y-0'}`}>Menu</span>
+                <span className={`block transform transition-all duration-200 ease-out text-xs sm:text-sm md:text-base ${isOverlayOpen ? 'opacity-0 translate-y-1' : 'opacity-100 translate-y-0'}`}>Menu</span>
                 {/* Animated X icon */}
                 <span className={`absolute inset-0 flex items-center justify-center transform transition-all duration-200 ease-out ${isOverlayOpen ? 'opacity-100 scale-100' : 'opacity-0 scale-90'}`} aria-hidden="true">
                   <span className="relative block w-6 h-6">
@@ -187,19 +187,19 @@ const Header = () => {
           />
           <aside
             id="overlay-menu"
-            className={`absolute right-0 top-0 h-full w-full sm:w-4/5 md:w-1/2 lg:w-1/3 bg-[#0b1020] text-white p-8 flex flex-col transform transition-transform duration-500 ease-out ${isOverlayOpen ? 'translate-x-0' : 'translate-x-full'}`}
+            className={`absolute right-0 top-0 h-full w-full sm:w-4/5 md:w-1/2 lg:w-1/3 bg-[#0b1020] text-white p-6 sm:p-8 flex flex-col transform transition-transform duration-500 ease-out overflow-y-auto ${isOverlayOpen ? 'translate-x-0' : 'translate-x-full'}`}
           >
-            <div className="flex items-center justify-between" />
+            <div className="flex items-center justify-between mb-8 sm:mb-0" />
             {/* Center menu vertically and horizontally */}
-            <div className="flex-1 flex items-center justify-center">
-              <nav className="space-y-8 text-center">
+            <div className="flex-1 flex items-center justify-center py-8 sm:py-0">
+              <nav className="space-y-6 sm:space-y-8 text-center w-full">
                 {navLinks.filter(link => link.name !== 'Speaking').map((link, idx) => {
                   if (link.name === 'Initiatives') {
                     return (
                       <div key={`${link.name}-${idx}`} className="space-y-4">
                         <button
                           onClick={toggleInitiatives}
-                          className="group block text-2xl md:text-3xl lg:text-4xl font-sans uppercase tracking-[0.2em] text-white/90 hover:text-white transition-all duration-200 focus:outline-none outline-none mx-auto"
+                          className="group block text-xl sm:text-2xl md:text-3xl lg:text-4xl font-sans uppercase tracking-[0.2em] text-white/90 hover:text-white transition-all duration-200 focus:outline-none outline-none mx-auto min-h-[44px] flex items-center justify-center"
                           ref={idx === 0 ? overlayFirstLinkRef : undefined}
                         >
                           <span className="relative inline-block">

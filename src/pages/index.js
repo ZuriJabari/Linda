@@ -43,54 +43,63 @@ const IndexPage = ({ data }) => {
 
   return (
     <Layout seo={{ title: 'Home' }}>
-      {/* Minimal hero */}
-      <section className="relative flex items-center justify-center overflow-hidden bg-white pt-10 lg:pt-8 pb-0">
+      {/* Mobile-first hero with image-first layout */}
+      <section className="relative flex items-center justify-center overflow-hidden bg-white pt-6 sm:pt-8 lg:pt-8 pb-4 sm:pb-6 lg:pb-0">
         <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-12 gap-8 lg:gap-16 items-center pt-2 lg:pt-3 pb-0">
-            {/* Left Column - Text Content */}
-            <div className="lg:col-span-6 text-center lg:text-left space-y-8 text-black">
-              {/* Kicker */}
-              <p className="text-xs md:text-[18px] tracking-widest uppercase text-gray-600">Community Builder & Philanthropy</p>
+          
+          {/* Mobile image first (shown only on mobile) */}
+          <div className="lg:hidden flex justify-center mb-8 sm:mb-10">
+            <div className="w-[75vw] sm:w-[65vw] max-w-[320px] sm:max-w-[360px]">
+              <StaticImage
+                src="../images/linda-hero.png"
+                alt="Linda Mutesi portrait"
+                placeholder="blurred"
+                width={360}
+                className="w-full h-auto object-contain rounded-2xl"
+              />
+            </div>
+          </div>
 
-              {/* Hero Title with contrasting sizes */}
-              <h1 className="font-serif font-semibold -tracking-[0.01em] leading-tight">
-                <span className="block text-5xl md:text-6xl lg:text-7xl">{heroGreeting}</span>
-                <span className="block text-6xl md:text-7xl lg:text-8xl xl:text-[88px]">{heroName}</span>
+          {/* Desktop layout with side-by-side content */}
+          <div className="grid lg:grid-cols-12 gap-6 sm:gap-8 lg:gap-16 items-center pt-2 lg:pt-3 pb-0">
+            
+            {/* Text Content */}
+            <div className="lg:col-span-6 text-center lg:text-left space-y-6 sm:space-y-8 text-black order-2 lg:order-1">
+              {/* Kicker */}
+              <p className="text-[10px] sm:text-xs md:text-sm lg:text-[16px] xl:text-[18px] tracking-widest uppercase text-gray-600">Community Builder & Philanthropy</p>
+
+              {/* Hero Title with mobile-optimized sizes */}
+              <h1 className="font-serif font-semibold -tracking-[0.01em] leading-[0.85] sm:leading-tight">
+                <span className="block text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl">{heroGreeting}</span>
+                <span className="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-[88px] mt-1 sm:mt-2">{heroName}</span>
               </h1>
 
               {/* Hero Subtitle */}
-              <p className="text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed max-w-4xl mx-auto lg:mx-0">
+              <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed max-w-4xl mx-auto lg:mx-0 px-2 sm:px-0">
                 {heroSubtitle}
               </p>
 
-              {/* CTA Buttons */}
-              <div className="pt-4 flex items-center justify-center lg:justify-start gap-4">
-                <Link to={ctaLink} className="inline-flex items-center gap-2 px-8 py-3 rounded-full border-2 border-black bg-black text-white hover:bg-transparent hover:text-black transition-all duration-200 font-medium">
+              {/* Mobile-optimized CTA Buttons */}
+              <div className="pt-2 sm:pt-4 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 sm:gap-4">
+                <Link 
+                  to={ctaLink} 
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 rounded-full border-2 border-black bg-black text-white hover:bg-transparent hover:text-black transition-all duration-200 font-medium text-sm sm:text-base min-h-[48px] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black"
+                >
                   {ctaText}
                   <span aria-hidden>→</span>
                 </Link>
-                <Link to="/blog" className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-transparent text-black hover:underline">
+                <Link 
+                  to="/blog" 
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full border border-transparent text-black hover:underline text-sm sm:text-base min-h-[48px] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300"
+                >
                   Visit the Blog
                   <span aria-hidden>↗</span>
                 </Link>
               </div>
             </div>
 
-            {/* Right column with small image (mobile only) */}
-            <div className="lg:hidden flex justify-center">
-              <div className="w-[70vw] max-w-[300px]">
-                <StaticImage
-                  src="../images/linda-hero.png"
-                  alt="Linda Mutesi portrait"
-                  placeholder="blurred"
-                  width={300}
-                  className="w-[85vw] max-w-[520px] h-auto object-contain"
-                />
-              </div>
-            </div>
-
-            {/* Right column with large image (desktop) */}
-            <div className="hidden lg:flex lg:col-span-6 justify-end">
+            {/* Desktop image (large) */}
+            <div className="hidden lg:flex lg:col-span-6 justify-end order-1 lg:order-2">
               <StaticImage
                 src="../images/linda-hero.png"
                 alt="Linda Mutesi portrait"
@@ -103,50 +112,50 @@ const IndexPage = ({ data }) => {
         </div>
       </section>
 
-      {/* Full-bleed quick-links */}
+      {/* Mobile-optimized quick-links */}
       <section className="w-full bg-[#F6F1EE]">
         <div className="w-full">
-          <div className="grid grid-cols-1 md:grid-cols-4 items-stretch text-center text-gray-900">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 items-stretch text-center text-gray-900">
             {/* Column 1 */}
-            <div className="md:border-r md:border-gray-200 px-6 py-8 transition-colors duration-200 bg-[#F3EEE9] hover:bg-[#EAE4DE] h-full flex flex-col items-center justify-center">
-              <Link to="/blog" className="block h-full">
-                <span className="block text-[11px] md:text-xs tracking-[0.28em] uppercase text-gray-600">Blog</span>
-                <span className="mt-3 block font-serif text-[18px] md:text-[19px] font-semibold tracking-wide text-gray-900">Read the Latest Story</span>
+            <div className="md:border-r md:border-gray-200 border-b sm:border-b-0 md:border-b border-gray-200 px-4 sm:px-6 py-6 sm:py-8 transition-colors duration-200 bg-[#F3EEE9] hover:bg-[#EAE4DE] h-full flex flex-col items-center justify-center min-h-[120px] sm:min-h-[140px]">
+              <Link to="/blog" className="block h-full w-full flex flex-col items-center justify-center">
+                <span className="block text-[10px] sm:text-[11px] md:text-xs tracking-[0.28em] uppercase text-gray-600">Blog</span>
+                <span className="mt-2 sm:mt-3 block font-serif text-base sm:text-lg md:text-[19px] font-semibold tracking-wide text-gray-900 leading-tight">Read the Latest Story</span>
               </Link>
             </div>
 
             {/* Column 2 */}
-            <div className="md:border-r md:border-gray-200 px-6 py-8 transition-colors duration-200 bg-[#EDE8F0] hover:bg-[#E7E1EC] h-full flex flex-col items-center justify-center">
-              <Link to="/books" className="block h-full">
-                <span className="block text-[11px] md:text-xs tracking-[0.28em] uppercase text-gray-600">Book Gallery</span>
-                <span className="mt-3 block font-serif text-[18px] md:text-[19px] font-semibold tracking-wide text-gray-900">Suggestions of Books and Articles for your reading pleasure</span>
+            <div className="md:border-r md:border-gray-200 border-b sm:border-b-0 md:border-b border-gray-200 px-4 sm:px-6 py-6 sm:py-8 transition-colors duration-200 bg-[#EDE8F0] hover:bg-[#E7E1EC] h-full flex flex-col items-center justify-center min-h-[120px] sm:min-h-[140px]">
+              <Link to="/books" className="block h-full w-full flex flex-col items-center justify-center">
+                <span className="block text-[10px] sm:text-[11px] md:text-xs tracking-[0.28em] uppercase text-gray-600">Book Gallery</span>
+                <span className="mt-2 sm:mt-3 block font-serif text-base sm:text-lg md:text-[19px] font-semibold tracking-wide text-gray-900 leading-tight px-2">Books & Articles for Reading</span>
               </Link>
             </div>
 
             {/* Column 3 */}
-            <div className="md:border-r md:border-gray-200 px-6 py-8 transition-colors duration-200 bg-[#E7EFEA] hover:bg-[#DFEAE5] h-full flex flex-col items-center justify-center">
-              <Link to="/podcast" className="block h-full">
-                <span className="block text-[11px] md:text-xs tracking-[0.28em] uppercase text-gray-600">Podcast</span>
-                <span className="mt-3 block font-serif text-[18px] md:text-[19px] font-semibold tracking-wide text-gray-900">Listen to my favorite Podcasts</span>
+            <div className="md:border-r md:border-gray-200 border-b sm:border-b-0 md:border-b border-gray-200 px-4 sm:px-6 py-6 sm:py-8 transition-colors duration-200 bg-[#E7EFEA] hover:bg-[#DFEAE5] h-full flex flex-col items-center justify-center min-h-[120px] sm:min-h-[140px]">
+              <Link to="/podcast" className="block h-full w-full flex flex-col items-center justify-center">
+                <span className="block text-[10px] sm:text-[11px] md:text-xs tracking-[0.28em] uppercase text-gray-600">Podcast</span>
+                <span className="mt-2 sm:mt-3 block font-serif text-base sm:text-lg md:text-[19px] font-semibold tracking-wide text-gray-900 leading-tight">Listen to Podcasts</span>
               </Link>
             </div>
 
-            {/* Column 4 - Stay Connected form */}
-            <div className="px-6 py-8 transition-colors duration-200 bg-[#F3EEE9] hover:bg-[#EAE4DE] h-full text-center flex flex-col items-center justify-center">
-              <div className="block h-full w-full max-w-md">
-                <span className="block text-[11px] md:text-xs tracking-[0.28em] uppercase text-gray-600">Stay Connected</span>
-                <span className="mt-3 block font-serif text-[18px] md:text-[19px] font-semibold tracking-wide text-gray-900">Subscribe to receive latest updates</span>
+            {/* Column 4 - Mobile-optimized Stay Connected form */}
+            <div className="px-4 sm:px-6 py-6 sm:py-8 transition-colors duration-200 bg-[#F3EEE9] hover:bg-[#EAE4DE] h-full text-center flex flex-col items-center justify-center min-h-[120px] sm:min-h-[140px]">
+              <div className="block h-full w-full max-w-sm">
+                <span className="block text-[10px] sm:text-[11px] md:text-xs tracking-[0.28em] uppercase text-gray-600">Stay Connected</span>
+                <span className="mt-2 sm:mt-3 block font-serif text-base sm:text-lg md:text-[19px] font-semibold tracking-wide text-gray-900 leading-tight px-2">Subscribe for Updates</span>
 
-                <form className="mt-4 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-center" onSubmit={(e)=>{e.preventDefault();}}>
+                <form className="mt-3 sm:mt-4 flex flex-col gap-2 sm:gap-3" onSubmit={(e)=>{e.preventDefault();}}>
                   <input
                     type="email"
                     required
                     placeholder="Enter your email"
-                    className="w-full sm:w-auto sm:flex-1 px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-black/20 focus:border-black/30 bg-white"
+                    className="w-full px-3 sm:px-4 py-2 text-sm sm:text-base rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-black/20 focus:border-black/30 bg-white min-h-[44px]"
                   />
                   <button
                     type="submit"
-                    className="px-5 py-2 rounded-md bg-black text-white font-semibold hover:bg-gray-900 transition-colors"
+                    className="w-full px-4 sm:px-5 py-2 text-sm sm:text-base rounded-md bg-black text-white font-semibold hover:bg-gray-900 transition-colors min-h-[44px]"
                   >
                     Subscribe
                   </button>
@@ -157,16 +166,17 @@ const IndexPage = ({ data }) => {
         </div>
       </section>
 
-      {/* Featured Article */}
+      {/* Featured Article - Mobile Optimized */}
       {featuredUid && (
-        <section className="py-16 bg-white">
+        <section className="py-12 sm:py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="mb-8 md:text-left text-center">
-              <div className="text-[11px] uppercase tracking-[0.28em] text-gray-500">Don't Miss</div>
-              <h2 className="mt-2 text-3xl md:text-4xl font-extrabold text-black">Featured Article</h2>
-              <div className="mt-2 h-px w-16 bg-black/70 md:ml-0 mx-auto" />
+            <div className="mb-6 sm:mb-8 md:text-left text-center">
+              <div className="text-[10px] sm:text-[11px] uppercase tracking-[0.28em] text-gray-500">Featured</div>
+              <h2 className="mt-1 text-xl sm:text-2xl md:text-3xl font-extrabold text-black">Latest Article</h2>
+              <div className="mt-2 h-px w-12 bg-black/60 md:ml-0 mx-auto" />
             </div>
-            <div className="grid md:grid-cols-12 gap-8 items-start">
+
+            <div className="grid md:grid-cols-12 gap-6 sm:gap-8 lg:gap-12">
               {/* Featured card (left) */}
               <div className="md:col-span-7">
                 <article className="group bg-white border border-gray-200 rounded-lg overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-xl focus-within:shadow-xl">
