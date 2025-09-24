@@ -10,8 +10,11 @@ cd "$ROOT_DIR"
 echo "Installing dependencies..."
 npm install
 
+echo "Cleaning previous build..."
+rm -rf "$BUILD_DIR" .cache
+
 echo "Building production bundle..."
-npm run build
+GATSBY_CPU_COUNT=1 npm run build
 
 if [ -f "$OUTPUT_ARCHIVE" ]; then
   echo "Removing existing archive: $OUTPUT_ARCHIVE"
@@ -24,3 +27,4 @@ zip -qr "$OUTPUT_ARCHIVE" .
 
 cd "$ROOT_DIR"
 echo "Deployment archive created at: $OUTPUT_ARCHIVE"
+echo "Archive size: $(du -h "$OUTPUT_ARCHIVE" | cut -f1)"

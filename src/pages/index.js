@@ -498,14 +498,14 @@ export default IndexPage;
 
 export const query = graphql`
   query HomeFeatured {
-    allPrismicBlogPost(limit: 4, sort: {first_publication_date: DESC}) {
+    allPrismicBlogPost(limit: 4) {
       nodes {
         first_publication_date
         tags
         raw
       }
     }
-    allPrismicBookGallery(limit: 8, sort: {first_publication_date: DESC}) {
+    allPrismicBookGallery(limit: 8) {
       nodes {
         id
         first_publication_date

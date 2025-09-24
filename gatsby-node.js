@@ -1,5 +1,25 @@
 const path = require('path');
 
+exports.createSchemaCustomization = ({ actions }) => {
+  const { createTypes } = actions;
+  
+  const typeDefs = `
+    type PrismicBlogPost implements Node {
+      raw: JSON
+    }
+    
+    type PrismicBookGallery implements Node {
+      raw: JSON
+    }
+    
+    type PrismicNavigation implements Node {
+      raw: JSON
+    }
+  `;
+  
+  createTypes(typeDefs);
+};
+
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions;
 
